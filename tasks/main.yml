@@ -12,6 +12,6 @@
     file: src={{ drush_install_path }}/drush dest={{ drush_path }} state=link
 
   - name: "Drush: Run drush to finish setting it up."
-    command: {{ drush_path }}
+    command: "{{ drush_path }}"
     register: drush_result
     changed_when: "'Execute a drush command' not in drush_result.stdout"

@@ -1,17 +1,17 @@
 ---
-  - name: "Clone Drush from GitHub."
-    git: repo=https://github.com/drush-ops/drush.git dest={{ drush_install_path }}
+- name: "Clone Drush from GitHub."
+  git: repo=https://github.com/drush-ops/drush.git dest={{ drush_install_path }}
 
-  - name: "Install Drush dependencies with Composer."
-    shell: >
-      {{ composer_path }} install
-      chdir={{ drush_install_path }}
-      creates={{ drush_install_path }}/vendor/autoload.php
+- name: "Install Drush dependencies with Composer."
+  shell: >
+    {{ composer_path }} install
+    chdir={{ drush_install_path }}
+    creates={{ drush_install_path }}/vendor/autoload.php
 
-  - name: "Create drush symlink."
-    file: src={{ drush_install_path }}/drush dest={{ drush_path }} state=link
+- name: "Create drush symlink."
+  file: src={{ drush_install_path }}/drush dest={{ drush_path }} state=link
 
-  - name: "Drush: Run drush to finish setting it up."
-    command: "{{ drush_path }}"
-    register: drush_result
-    changed_when: "'Execute a drush command' not in drush_result.stdout"
+- name: "Drush: Run drush to finish setting it up."
+  command: "{{ drush_path }}"
+  register: drush_result
+  changed_when: "'Execute a drush command' not in drush_result.stdout"

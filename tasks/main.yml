@@ -1,6 +1,9 @@
 ---
 - name: "Clone Drush from GitHub."
-  git: repo=https://github.com/drush-ops/drush.git dest={{ drush_install_path }}
+  git: >
+    repo=https://github.com/drush-ops/drush.git
+    dest={{ drush_install_path }}
+    version={{ drush_version }}
 
 - name: "Install Drush dependencies with Composer."
   shell: >

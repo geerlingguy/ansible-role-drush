@@ -20,6 +20,10 @@ The path where composer will be installed and available to your system. Should b
 
 This role also relies on the presence of the `composer_path` variable, which is used to run composer. This could be, simply, `composer` on your system (if composer is in your user's `$PATH`).
 
+    drush_version: master
+
+The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`).
+
 ## Dependencies
 
   - geerlingguy.git (Installs Git).

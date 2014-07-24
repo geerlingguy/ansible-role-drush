@@ -7,12 +7,15 @@
 
 - name: "Install Drush dependencies with Composer."
   shell: >
-    {{ composer_path }} install
+    {{ composer_path }} install --prefer-source --no-interaction
     chdir={{ drush_install_path }}
     creates={{ drush_install_path }}/vendor/autoload.php
 
 - name: "Create drush symlink."
-  file: src={{ drush_install_path }}/drush dest={{ drush_path }} state=link
+  file: >
+    src={{ drush_install_path }}/drush
+    dest={{ drush_path }}
+    state=link
 
 - name: "Drush: Run drush to finish setting it up."
   command: "{{ drush_path }}"

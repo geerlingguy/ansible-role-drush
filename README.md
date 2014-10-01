@@ -8,7 +8,7 @@ None.
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `vars/main.yml`):
+Available variables are listed below, along with default values (see `defaults/main.yml`):
 
     drush_install_path: /usr/local/share/drush
 
@@ -23,6 +23,10 @@ This role also relies on the presence of the `composer_path` variable, which is 
     drush_version: master
 
 The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`).
+
+    drush_keep_updated: no
+
+Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
 
 ## Dependencies
 

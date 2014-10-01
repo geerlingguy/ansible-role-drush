@@ -1,2 +1,5 @@
+---
+drush_install_path: /usr/local/share/drush
+drush_path: /usr/local/bin/drush
 drush_version: master
-drush_update: no
+drush_keep_updated: no

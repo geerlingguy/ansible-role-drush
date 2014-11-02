@@ -24,10 +24,6 @@ This role also relies on the presence of the `composer_path` variable, which is 
 
 The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`).
 
-    drush_keep_updated: no
-
-Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
-
 ## Dependencies
 
   - geerlingguy.git (Installs Git).

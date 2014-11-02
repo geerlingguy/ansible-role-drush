@@ -4,7 +4,6 @@
     repo=https://github.com/drush-ops/drush.git
     dest={{ drush_install_path }}
     version={{ drush_version }}
-    update={{ drush_keep_updated }}
 
 - name: Install Drush dependencies with Composer.
   shell: >

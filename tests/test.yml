@@ -4,4 +4,5 @@
   roles:
     - geerlingguy.php
     - geerlingguy.composer
+    - geerlingguy.git
     - ansible-role-drush

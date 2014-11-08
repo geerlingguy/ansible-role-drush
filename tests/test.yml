@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - geerlingguy.php
+    - geerlingguy.composer
+    - ansible-role-drush

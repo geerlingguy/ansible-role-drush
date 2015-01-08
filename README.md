@@ -4,6 +4,10 @@
 
 Installs Drush, a command line shell and scripting interface for Drupal, on any Linux or UNIX system.
 
+## Git module catch
+
+In versions of Ansible affected by https://github.com/ansible/ansible-modules-core/issues/426 (at least 1.8.{1,2}), the role will fail with drush\_keep\_updated: no (the default). Set it to yes if you need it work with affected Ansible versions.
+
 ## Requirements
 
 None.

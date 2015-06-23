@@ -6,6 +6,8 @@ env:
   - SITE=test.yml
 
 before_install:
+  - sudo add-apt-repository ppa:ondrej/php5 -y
+  - sudo apt-get update -q
   - sudo apt-get update -qq
   - sudo apt-get install curl
 

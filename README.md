@@ -18,9 +18,7 @@ The location of the entire drush installation (includes all the supporting files
 
     drush_path: /usr/local/bin/drush
 
-The path where composer will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `composer` instead of the full path.
-
-This role also relies on the presence of the `composer_path` variable, which is used to run composer. This could be, simply, `composer` on your system (if composer is in your user's `$PATH`).
+The path where drush will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `drush` instead of the full path.
 
     drush_version: master
 

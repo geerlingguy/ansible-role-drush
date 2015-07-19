@@ -1,10 +1,10 @@
 ---
 - name: Clone Drush from GitHub.
-  git: >
-    repo=https://github.com/drush-ops/drush.git
-    dest={{ drush_install_path }}
-    version={{ drush_version }}
-    update={{ drush_keep_updated }}
+  git:
+    repo: https://github.com/drush-ops/drush.git
+    dest: "{{ drush_install_path }}"
+    version: "{{ drush_version }}"
+    update: "{{ drush_keep_updated }}"
 
 # See: https://github.com/geerlingguy/ansible-role-drush/issues/6
 - name: Ensure Drush can be installed on Debian Wheezy.
@@ -21,10 +21,10 @@
     creates={{ drush_install_path }}/vendor/autoload.php
 
 - name: Create drush symlink.
-  file: >
-    src={{ drush_install_path }}/drush
-    dest={{ drush_path }}
-    state=link
+  file:
+    src: "{{ drush_install_path }}/drush"
+    dest: "{{ drush_path }}"
+    state: link
 
 - name: Run drush to finish setting it up.
   command: "{{ drush_path }}"

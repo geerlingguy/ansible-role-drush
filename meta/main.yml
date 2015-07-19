@@ -1,8 +1,8 @@
 ---
 dependencies:
-  - { role: geerlingguy.git }
-  - { role: geerlingguy.php }
-  - { role: geerlingguy.composer }
+  - geerlingguy.git
+  - geerlingguy.php
+  - geerlingguy.composer
 
 galaxy_info:
   author: geerlingguy

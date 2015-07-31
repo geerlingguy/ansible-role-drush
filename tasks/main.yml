@@ -30,3 +30,9 @@
   command: "{{ drush_path }}"
   register: drush_result
   changed_when: "'Execute a drush command' not in drush_result.stdout"
+
+- name: Install Drush plugins.
+  command: "{{ drush_path }} pm-download {{ item }}"
+  args:
+    creates: "~/.drush/{{ item }}"
+  with_items: drush_plugins

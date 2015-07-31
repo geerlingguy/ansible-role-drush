@@ -36,3 +36,4 @@
   args:
     creates: "{{ drush_install_path}}/commands/{{ item }}"
   with_items: drush_plugins
+  notify: drush clear cache

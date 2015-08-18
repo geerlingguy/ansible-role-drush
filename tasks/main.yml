@@ -5,6 +5,7 @@
     dest: "{{ drush_install_path }}"
     version: "{{ drush_version }}"
     update: "{{ drush_keep_updated }}"
+    depth: "{{ drush_clone_depth }}"
 
 # See: https://github.com/geerlingguy/ansible-role-drush/issues/6
 - name: Ensure Drush can be installed on Debian Wheezy.

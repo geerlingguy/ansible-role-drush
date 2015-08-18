@@ -28,6 +28,10 @@ The version of Drush to install (examples: `master` for the bleeding edge, `7.x`
 
 Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
 
+    drush_clone_depth: ~
+
+Whether to clone the entire repo (by default), or specify the number of previous commits for a smaller and faster clone.
+
 ## Dependencies
 
   - geerlingguy.git (Installs Git).

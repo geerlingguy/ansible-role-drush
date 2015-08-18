@@ -33,6 +33,10 @@ Whether to keep Drush up-to-date with the latest revision of the branch specifie
 
 These options are the safest for avoiding GitHub API rate limits when installing Drush, and can be very helpful when working on dependencies/installation, but builds can be sped up substantially by changing the first option to --prefer-dist.
 
+    drush_clone_limit: ~
+
+Whether to clone the entire repo (by default), or specify the number of previous commits for a smaller and faster clone.
+
 ## Dependencies
 
   - geerlingguy.git (Installs Git).

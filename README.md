@@ -28,6 +28,10 @@ The version of Drush to install (examples: `master` for the bleeding edge, `7.x`
 
 Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
 
+    drush_composer_cli_options: "--prefer-source --no-interaction"
+
+These options are the safest for avoiding GitHub API rate limits when installing Drush, and can be very helpful when working on dependencies/installation, but builds can be sped up substantially by changing the first option to --prefer-dist.
+
 ## Dependencies
 
   - geerlingguy.git (Installs Git).

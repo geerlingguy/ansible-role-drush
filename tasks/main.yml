@@ -9,14 +9,14 @@
 # See: https://github.com/geerlingguy/ansible-role-drush/issues/6
 - name: Ensure Drush can be installed on Debian Wheezy.
   shell: >
-    {{ composer_path }} update --prefer-source --no-interaction
+    {{ composer_path }} update {{ drush_composer_cli_options }}
     chdir={{ drush_install_path }}
     creates={{ drush_install_path }}/vendor/autoload.php
   when: ansible_distribution == "Debian" and ansible_distribution_release == "wheezy"
 
 - name: Install Drush dependencies with Composer.
   shell: >
-    {{ composer_path }} install --prefer-source --no-interaction
+    {{ composer_path }} install {{ drush_composer_cli_options }}
     chdir={{ drush_install_path }}
     creates={{ drush_install_path }}/vendor/autoload.php
 

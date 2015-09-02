@@ -5,7 +5,7 @@
     dest: "{{ drush_install_path }}"
     version: "{{ drush_version }}"
     update: "{{ drush_keep_updated }}"
-  register: drushclone
+  register: drush_clone
 
 # See: https://github.com/geerlingguy/ansible-role-drush/issues/6
 - name: Ensure Drush can be installed on Debian Wheezy.
@@ -21,11 +21,11 @@
     chdir={{ drush_install_path }}
     creates={{ drush_install_path }}/vendor/autoload.php
 
-- name: Update Drush dependencies with Composer.
+- name: Update Drush dependencies with Composer (if Drush is updated).
   shell: >
     {{ composer_path }} update {{ drush_composer_cli_options }}
     chdir={{ drush_install_path }}
-  when: drushclone.changed
+  when: drush_clone.changed
 
 - name: Create drush symlink.
   file:

@@ -5,6 +5,7 @@
     dest: "{{ drush_install_path }}"
     version: "{{ drush_version }}"
     update: "{{ drush_keep_updated }}"
+    force: "{{ drush_force_update }}"
   register: drush_clone
 
 - name: Check for composer.json

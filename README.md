@@ -25,8 +25,9 @@ The path where drush will be installed and available to your system. Should be i
 The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`).
 
     drush_keep_updated: no
+    drush_force_update: no
 
-Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`.
+Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`, and whether to force the update (e.g. overwrite local modifications to the drush repository).
 
     drush_composer_cli_options: "--prefer-source --no-interaction"
 

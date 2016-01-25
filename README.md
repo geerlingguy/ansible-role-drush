@@ -26,6 +26,10 @@ The version of Drush to install (examples: `master` for the bleeding edge, `7.x`
 
     drush_keep_updated: no
     drush_force_update: no
+    
+Add the hostkey for github.com if not already added.
+    
+    drush_accept_hostkey: no
 
 Whether to keep Drush up-to-date with the latest revision of the branch specified by `drush_version`, and whether to force the update (e.g. overwrite local modifications to the drush repository).
 

@@ -37,3 +37,6 @@ script:
 
   # Check if drush is installed and working.
   - drush --version
+
+notifications:
+   webhooks: https://galaxy.ansible.com/api/v1/notifications/

@@ -41,6 +41,6 @@ galaxy_info:
     - name: Debian
       versions:
       - all
-  tags:
+  galaxy_tags:
     - development
     - web

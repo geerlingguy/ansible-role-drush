@@ -20,9 +20,9 @@ The location of the entire drush installation (includes all the supporting files
 
 The path where drush will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `drush` instead of the full path.
 
-    drush_version: master
+    drush_version: "master"
 
-The version of Drush to install (examples: `master` for the bleeding edge, `7.x`, `6.x`, `6.2.0`).
+The version of Drush to install (examples: `"master"` for the bleeding edge, `"7.x"`, `"6.x"`, `"6.2.0"`). This should be a string as it refers to a git branch, tag, or commit hash.
 
     drush_keep_updated: no
     drush_force_update: no

@@ -6,6 +6,7 @@
     version: "{{ drush_version }}"
     update: "{{ drush_keep_updated }}"
     force: "{{ drush_force_update }}"
+    accept_hostkey: "{{ drush_accept_hostkey }}"
   register: drush_clone
 
 - name: Check for composer.json

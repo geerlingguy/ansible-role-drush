@@ -2,5 +2,5 @@
 - name: drush clear cache
   command: "{{ drush_path }} cache-clear drush"
   register: drush_cache_clear
-  changed_when: "'cache was cleared' in drush_cache_clear.stdout"
+  changed_when: "'cache was cleared' in drush_cache_clear.stderr"
   become: no

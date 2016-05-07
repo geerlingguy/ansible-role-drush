@@ -5,8 +5,7 @@ drush_version: "master"
 drush_keep_updated: no
 drush_force_update: no
 drush_plugins:
-  - registry_rebuild
-  - drupalgeddon
+  - site_audit
 
 # These options are the safest for avoiding GitHub API rate limits, but builds
 # can be sped up substantially by changing to --prefer-dist.

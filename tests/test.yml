@@ -15,7 +15,7 @@
       when: ansible_os_family == 'RedHat'
 
   roles:
-    - geerlingguy.repo-remi
+    - role: geerlingguy.repo-remi
       when: ansible_os_family == 'RedHat'
     - geerlingguy.php
     - geerlingguy.composer

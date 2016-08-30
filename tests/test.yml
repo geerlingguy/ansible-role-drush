@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: all
 
   vars:
     php_enable_webserver: false
@@ -10,4 +9,4 @@
     - geerlingguy.php
     - geerlingguy.composer
     - geerlingguy.git
-    - ansible-role-drush
+    - role_under_test

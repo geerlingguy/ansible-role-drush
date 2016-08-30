@@ -42,7 +42,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
 
   # Test Drush.
-  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm drush --version'
+  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm drush --version || true'
 
   # Clean up.
   - 'sudo docker stop "$(cat ${container_id})"'

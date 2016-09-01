@@ -10,9 +10,13 @@
       yum: name=which state=present
       when: ansible_os_family == 'RedHat'
 
-    - name: Enable remi repo for PHP 7.0.
+    - name: Enable remi repo for PHP 7.0 (RedHat).
       set_fact: php_enablerepo="remi,remi-php70"
       when: ansible_os_family == 'RedHat'
+
+    - name: Update apt cache.
+      apt: update_cache=yes
+      when: ansible_os_family == 'Debian'
 
   roles:
     - role: geerlingguy.repo-remi

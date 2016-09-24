@@ -6,10 +6,6 @@
     php_opcache_enable: "0"
 
   pre_tasks:
-    - name: Ensure build dependencies are installed (RedHat).
-      yum: name=which state=present
-      when: ansible_os_family == 'RedHat'
-
     - name: Enable remi repo for PHP 7.0 (RedHat).
       set_fact: php_enablerepo="remi,remi-php70"
       when: ansible_os_family == 'RedHat'

@@ -39,9 +39,5 @@ script:
   # Test Drush.
   - 'docker exec --tty "$(cat ${container_id})" env TERM=xterm drush --version || true'
 
-after_success:
-  # Clean up.
-  - 'docker stop "$(cat ${container_id})"'
-
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

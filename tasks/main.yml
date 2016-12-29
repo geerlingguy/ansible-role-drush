@@ -23,7 +23,6 @@
 # See: https://github.com/geerlingguy/ansible-role-drush/issues/6
 - name: Ensure Drush can be installed on Debian Wheezy.
   shell: >
-    COMPOSER_HOME={{ composer_home_path }}
     {{ composer_path }} update {{ drush_composer_cli_options }}
     chdir={{ drush_install_path }}
   when: drush_clone.changed and ansible_distribution == "Debian" and ansible_distribution_release == "wheezy" and drush_composer.stat.exists

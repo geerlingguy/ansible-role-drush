@@ -9,6 +9,13 @@
     depth: "{{ drush_clone_depth }}"
   register: drush_clone
 
+- name: Change Drush directory owner.
+  file:
+    path: "{{ drush_install_path }}"
+    owner: "{{ composer_home_owner }}"
+    group: "{{ composer_home_owner }}"
+    recurse: yes
+
 - name: Check for composer.json
   stat: path={{ drush_install_path }}/composer.json
   register: drush_composer
@@ -16,15 +23,18 @@
 # See: https://github.com/geerlingguy/ansible-role-drush/issues/6
 - name: Ensure Drush can be installed on Debian Wheezy.
   shell: >
+    COMPOSER_HOME={{ composer_home_path }}
     {{ composer_path }} update {{ drush_composer_cli_options }}
     chdir={{ drush_install_path }}
   when: drush_clone.changed and ansible_distribution == "Debian" and ansible_distribution_release == "wheezy" and drush_composer.stat.exists
 
 - name: Install Drush dependencies with Composer.
   shell: >
+    COMPOSER_HOME={{ composer_home_path }}
     {{ composer_path }} install {{ drush_composer_cli_options }}
     chdir={{ drush_install_path }}
   when: drush_clone.changed and drush_composer.stat.exists
+  become: no
 
 - name: Create drush symlink.
   file:

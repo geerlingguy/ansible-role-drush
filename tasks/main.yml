@@ -1,4 +1,17 @@
 ---
+- name: Install PHP Timezone via PECL
+  pear: name=pecl/timezonedb state=present
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_release == "xenial"
+  register: php_timezonedb
+
+- name: Add Timezonedb Config File to PHP CLI
+  copy: src=timezonedb.ini dest=/etc/php/7.0/{{ item }}/conf.d/30-timezonedb.ini owner=root group=root mode=644
+  with_items:
+    - apache2
+    - cli
+    - fpm
+  when: php_timezonedb.changed
+
 - name: Clone Drush from GitHub.
   git:
     repo: https://github.com/drush-ops/drush.git

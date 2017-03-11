@@ -6,7 +6,9 @@ Installs [Drush](http://www.drush.org/en/master/), a command line shell and scri
 
 ## Requirements
 
-None.
+PHP must be installed on the system prior to running this role (suggested role: `geerlingguy.php`).
+
+Source installation additionally requires Git and Composer to also be installed on the system (suggested roles: `geerlingguy.git` and `geerlingguy.composer`).
 
 ## Role Variables
 
@@ -53,9 +55,7 @@ Whether to clone the entire repo (by default), or specify the number of previous
 
 ## Dependencies
 
-  - geerlingguy.git (Installs Git).
-  - geerlingguy.php (Installs PHP).
-  - geerlingguy.composer (Installs Composer).
+None.
 
 ## Example Playbook
 

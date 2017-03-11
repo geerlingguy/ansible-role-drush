@@ -12,13 +12,23 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    drush_install_path: /usr/local/share/drush
+    drush_phar_url: https://github.com/drush-ops/drush/releases/download/8.1.10/drush.phar
 
-The location of the entire drush installation (includes all the supporting files, as well as the `drush` executable file.
+The URL from which the Drush phar file will be downloaded.
 
     drush_path: /usr/local/bin/drush
 
 The path where drush will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `drush` instead of the full path.
+
+    drush_config: ~/.drush
+
+Path to the directory where Drush will store its generated config.
+
+### Variables used for source install (Git).
+
+    drush_install_path: /usr/local/share/drush
+
+The location of the entire drush installation (includes all the supporting files, as well as the `drush` executable file.
 
     drush_version: "master"
 

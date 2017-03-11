@@ -1,0 +1,15 @@
+---
+- name: Install Drush.
+  get_url:
+    url: "{{ drush_phar_url }}"
+    dest: "{{ drush_path }}"
+
+- name: Ensure Drush is executable.
+  file:
+    path: "{{ drush_path }}"
+    mode: 0755
+
+- name: Run Drush init.
+  shell: >
+    php {{ drush_path }} init
+    creates={{ drush_config }}

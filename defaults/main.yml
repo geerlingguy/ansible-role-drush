@@ -3,7 +3,6 @@
 drush_version: "8.1.10"
 drush_phar_url: https://github.com/drush-ops/drush/releases/download/{{ drush_version }}/drush.phar
 drush_path: /usr/local/bin/drush
-drush_config: ~/.drush
 
 # Install from source (git clone + composer-based install).
 drush_install_from_source: no

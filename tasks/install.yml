@@ -11,5 +11,5 @@
 
 - name: Run Drush init.
   shell: >
-    php {{ drush_path }} init
+    php {{ drush_path }} init --no-add-path
     creates={{ drush_config }}

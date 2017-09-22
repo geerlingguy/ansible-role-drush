@@ -1,6 +1,6 @@
 ---
 - include: install.yml
-  when: not drush_install_from_source
+  when: not drush_install_from_source or drush_version|version_compare('9.0', '>=')
 
 - include: source-install.yml
-  when: drush_install_from_source
+  when: drush_install_from_source and drush_version|version_compare('9.0', '<')

@@ -60,13 +60,14 @@ The path in which a symlink to the Drush binary installed via Composer should be
 
 ### Variables used for source install (Git).
 
-    drush_install_path: /usr/local/share/drush
+    drush_source_install_bin_path: /usr/local/bin/drush
+    drush_source_install_path: /usr/local/share/drush
 
 The location of the entire drush installation (includes all the supporting files, as well as the `drush` executable file.
 
-    drush_version: "master"
+    drush_source_install_version: "8.x"
 
-The version of Drush to install (examples: `"master"` for the bleeding edge, `"7.x"`, `"6.x"`, `"6.2.0"`). This should be a string as it refers to a git branch, tag, or commit hash.
+The version of Drush to install (examples: `"master"` for the bleeding edge, `"8.x"`, `"7.x"`, `"6.2.0"`). This should be a string as it refers to a git branch, tag, or commit hash.
 
     drush_keep_updated: no
     drush_force_update: no

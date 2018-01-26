@@ -13,8 +13,9 @@ drush_composer_path: /usr/local/bin/drush
 
 # Install from source (git clone + composer-based install).
 drush_install_from_source: no
-drush_install_path: /usr/local/share/drush
-# drush_version: "master"
+drush_source_install_bin_path: /usr/local/bin/drush
+drush_source_install_path: /usr/local/share/drush
+drush_source_install_version: "8.x"
 drush_keep_updated: no
 drush_force_update: no
 drush_force_composer_install: no

@@ -18,7 +18,7 @@
 
 - name: Install Drush.
   get_url:
-    url: "{{ drush_phar_url }}"
+    url: "{{ drush_launcher_phar_url }}"
     dest: "{{ drush_path }}"
 
 - name: Ensure Drush is executable.

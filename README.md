@@ -14,25 +14,21 @@ Source installation additionally requires Git and Composer to also be installed 
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    drush_phar_url: https://github.com/drush-ops/drush/releases/download/8.1.10/drush.phar
+    drush_launcher_version: "0.5.1"
 
-The URL from which the Drush phar file will be downloaded.
+The version of the Drush Launcher to download. This should exactly match an available [Drush Launcher release](https://github.com/drush-ops/drush-launcher/releases).
+
+    drush_launcher_phar_url: https://github.com/drush-ops/drush-launcher/releases/download/{{ drush_launcher_version }}/drush.phar
+
+The URL from which the Drush Launcher phar file will be downloaded.
 
     drush_path: /usr/local/bin/drush
 
 The path where drush will be installed and available to your system. Should be in your user's `$PATH` so you can run commands simply with `drush` instead of the full path.
 
-    drush_config: ~/.drush
-
-Path to the directory where Drush will store its generated config.
-
     drush_install_from_source: no
 
 Whether to use Git and Composer to install Drush from source.
-
-    drush_version: 8.1.10
-
-The version of Drush to download (examples: `8.1.10`, `8.1.9`). This should exactly match an available [Drush release](https://github.com/drush-ops/drush/releases). Note that setting `drush_install_from_source` to `yes` changes the possible values for `drush_version`--see below for more information.
 
 ### Variables used for source install (Git).
 

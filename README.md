@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-drush.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-drush)
 
-Installs [Drush](http://www.drush.org/en/master/), a command line shell and scripting interface for Drupal, on any Linux or UNIX system.
+Installs [Drush](http://www.drush.org), a command line shell and scripting interface for Drupal, on any Linux or UNIX system.
 
 ## Requirements
 
@@ -18,7 +18,9 @@ Available variables are listed below, along with default values (see `defaults/m
 
 ### Drush Launcher
 
-[Drush Launcher](https://github.com/drush-ops/drush-launcher) is a small wrapper around Drush for your global `$PATH`. It is the recommended way to use `drush`, but there are some situations where you might wish to install and run Drush globally without using Drush Launcher. The following variables control Drush Launcher's installation:
+[Drush Launcher](https://github.com/drush-ops/drush-launcher) is a small wrapper around Drush for your global `$PATH`.
+
+It is the recommended way to use `drush`, but there are some situations where you might wish to install and run Drush globally without using Drush Launcher. The following variables control Drush Launcher's installation:
 
     drush_launcher_install: yes
 
@@ -42,7 +44,7 @@ Some people need to have the full power of `drush` available globally, and this 
 
     drush_composer_global_install: no
 
-Set to `yes` if you want to install `drush` globally using Composer.
+Set to `yes` (and set `drush_launcher_install` to `no`) if you want to install `drush` globally using Composer.
 
     drush_composer_version: "~9.0"
 
@@ -59,6 +61,12 @@ The path in which a symlink to the Drush binary installed via Composer should be
 > NOTE: Composer 'global' installation is global _to the user under which Drush is installed_—e.g. if you install globally using the root user, `drush` will only work properly as `root` or when using `sudo`.
 
 ### Variables used for source install (Git).
+
+You can also install Drush from source if you need a bleeding-edge release, or if you need a specific version which can't be installed via Composer.
+
+    drush_install_from_source: no
+
+Set to `yes` (and set `drush_launcher_install` to `no`) if you want to install `drush` globally using the Drush source code.
 
     drush_source_install_bin_path: /usr/local/bin/drush
     drush_source_install_path: /usr/local/share/drush

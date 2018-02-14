@@ -1,4 +1,10 @@
 ---
+- name: Set Drush version for source install
+  set_fact:
+    drush_source_install_version: "{{ drush_version }}"
+  when:
+    - drush_version is defined
+
 - name: Clone Drush from GitHub.
   git:
     repo: https://github.com/drush-ops/drush.git

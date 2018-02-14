@@ -1,4 +1,11 @@
 ---
+
+- name: Set Drush version for composer install
+  set_fact:
+    drush_composer_version: "{{ drush_version }}"
+  when:
+    - drush_version is defined
+
 - name: Ensure Drush is installed globally via Composer.
   composer:
     command: require

@@ -26,7 +26,7 @@ It is the recommended way to use `drush`, but there are some situations where yo
 
 Set to `no` if you don't want the launcher installed.
 
-    drush_launcher_version: "0.5.1"
+    drush_launcher_version: "0.6.0"
 
 The version of the Drush Launcher to install. This should exactly match an available [Drush Launcher release](https://github.com/drush-ops/drush-launcher/releases).
 

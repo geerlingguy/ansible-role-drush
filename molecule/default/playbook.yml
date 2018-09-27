@@ -49,4 +49,4 @@
       when: ansible_os_family == 'RedHat'
     - role: geerlingguy.php
     - role: geerlingguy.composer
-    - role: geerlingguy.ansible
+    - role: geerlingguy.drush

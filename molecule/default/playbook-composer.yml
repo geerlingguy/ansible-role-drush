@@ -8,7 +8,7 @@
     php_opcache_enable: "0"
 
     # Use Composer global install.
-    drush_launcher_install: fasle
+    drush_launcher_install: false
     drush_composer_global_install: true
     drush_composer_update: true
 

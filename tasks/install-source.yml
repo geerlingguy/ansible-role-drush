@@ -32,7 +32,7 @@
   tags: ['skip_ansible_lint']
 
 - name: Create drush symlink.
-  file:
+  file:  # noqa 208
     src: "{{ drush_source_install_path }}/drush"
     dest: "{{ drush_source_install_bin_path }}"
     state: link

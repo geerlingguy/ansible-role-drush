@@ -17,7 +17,7 @@
   tags: ['skip_ansible_lint']
 
 - name: Ensure globally-installed Drush is symlinked into bin dir.
-  file:
+  file:  # noqa 208
     src: "~/.composer/vendor/bin/drush"
     dest: "{{ drush_composer_path }}"
     state: link

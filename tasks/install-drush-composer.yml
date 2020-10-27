@@ -18,6 +18,6 @@
 
 - name: Ensure globally-installed Drush is symlinked into bin dir.
   file:  # noqa 208
-    src: "~/.composer/vendor/bin/drush"
+    src: "{{ drush_composer_global_bin_path }}/drush"
     dest: "{{ drush_composer_path }}"
     state: link

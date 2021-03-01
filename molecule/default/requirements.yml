@@ -1,6 +1,7 @@
 ---
-- src: geerlingguy.repo-remi
-- src: geerlingguy.php-versions
-- src: geerlingguy.php
-- src: geerlingguy.composer
-- src: geerlingguy.git
+roles:
+  - name: geerlingguy.repo-remi
+  - name: geerlingguy.php-versions
+  - name: geerlingguy.php
+  - name: geerlingguy.composer
+  - name: geerlingguy.git

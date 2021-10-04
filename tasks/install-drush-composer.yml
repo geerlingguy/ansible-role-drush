@@ -1,7 +1,7 @@
 ---
 # Use manual composer tasks until Ansible 2.10.4 is released.
 - name: Ensure Drush is installed globally via Composer.
-  command: "{{ composer_path }} global require drush/drush:{{ drush_composer_version }}"
+  command: "{{ composer_path }} global require drush/drush:{{ drush_composer_version }} {{ drush_composer_cli_options }}" 
   register: drush_composer_require
   changed_when: "'Nothing to install' not in drush_composer_require.stderr"
 

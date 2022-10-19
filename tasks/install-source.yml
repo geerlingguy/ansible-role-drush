@@ -16,7 +16,7 @@
 # See: https://github.com/geerlingguy/ansible-role-drush/issues/6
 - name: Ensure Drush can be installed on Debian Wheezy.
   command: >
-    {{ composer_path }} update {{ drush_composer_cli_options }}
+    {{ drush_composer_path }} update {{ drush_composer_cli_options }}
     chdir={{ drush_source_install_path }}
   when:
     - drush_clone.changed and ansible_distribution == "Debian"
@@ -26,7 +26,7 @@
 
 - name: Install Drush dependencies with Composer.
   command: >
-    {{ composer_path }} install {{ drush_composer_cli_options }}
+    {{ drush_composer_path }} install {{ drush_composer_cli_options }}
     chdir={{ drush_source_install_path }}
   when: (drush_clone.changed and drush_composer.stat.exists) or drush_force_composer_install
   tags: ['skip_ansible_lint']

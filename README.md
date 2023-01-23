@@ -74,7 +74,7 @@ Set to `yes` (and set `drush_launcher_install` to `false`) if you want to instal
 
 The location of the entire drush installation (includes all the supporting files, as well as the `drush` executable file.
 
-    drush_source_install_version: "8.x"
+    drush_source_install_version: "11.x"
 
 The version of Drush to install (examples: `"master"` for the bleeding edge, `"8.x"`, `"7.x"`, `"6.2.0"`). This should be a string as it refers to a git branch, tag, or commit hash.
 

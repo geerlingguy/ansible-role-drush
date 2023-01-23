@@ -17,7 +17,7 @@ drush_composer_path: /usr/local/bin/drush
 drush_install_from_source: false
 drush_source_install_bin_path: /usr/local/bin/drush
 drush_source_install_path: /usr/local/share/drush
-drush_source_install_version: "8.x"
+drush_source_install_version: "11.x"
 drush_keep_updated: false
 drush_force_update: false
 drush_force_composer_install: false

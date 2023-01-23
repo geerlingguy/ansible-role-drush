@@ -41,5 +41,5 @@
 - name: Run drush to finish setting it up.
   command: "{{ drush_source_install_bin_path }}"
   register: drush_result
-  changed_when: "'Execute a drush command' not in drush_result.stdout"
+  changed_when: "'Available commands' not in drush_result.stdout"
   become: false

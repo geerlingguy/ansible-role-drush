@@ -26,7 +26,7 @@ It is the recommended way to use `drush`, but there are some situations where yo
 
 Set to `no` if you don't want the launcher installed.
 
-    drush_launcher_version: "0.6.0"
+    drush_launcher_version: "0.10.1"
 
 The version of the Drush Launcher to install. This should exactly match an available [Drush Launcher release](https://github.com/drush-ops/drush-launcher/releases).
 
@@ -46,7 +46,7 @@ Some people need to have the full power of `drush` available globally, and this 
 
 Set to `yes` (and set `drush_launcher_install` to `false`) if you want to install `drush` globally using Composer.
 
-    drush_composer_version: "~9.0"
+    drush_composer_version: "~11.0"
 
 The version constraint for the global Drush installation.
 
@@ -76,7 +76,7 @@ The location of the entire drush installation (includes all the supporting files
 
     drush_source_install_version: "11.x"
 
-The version of Drush to install (examples: `"master"` for the bleeding edge, `"8.x"`, `"7.x"`, `"6.2.0"`). This should be a string as it refers to a git branch, tag, or commit hash.
+The version of Drush to install (examples: `"master"` for the bleeding edge, `"11.x"`, `"10.x"`, `"6.2.0"`). This should be a string as it refers to a git branch, tag, or commit hash.
 
     drush_keep_updated: false
     drush_force_update: false

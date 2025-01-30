@@ -41,13 +41,14 @@ jobs:
     strategy:
       matrix:
         include:
-          - distro: ubuntu2004
+          - distro: ubuntu2404
             playbook: converge.yml
-          - distro: debian11
+          - distro: debian12
             playbook: converge.yml
-          - distro: rockylinux9
-            playbook: composer.yml
-          - distro: rockylinux9
+          # See: https://github.com/geerlingguy/docker-rockylinux9-ansible/issues/6
+          # - distro: rockylinux9
+          #   playbook: composer.yml
+          - distro: debian12
             playbook: source.yml
 
     steps:

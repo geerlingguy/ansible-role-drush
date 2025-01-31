@@ -1,6 +1,6 @@
 # Ansible Role: Drush
 
-[![CI](https://github.com/geerlingguy/ansible-role-drush/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-drush/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-drush/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-drush/actions/workflows/ci.yml)
 
 Installs [Drush](http://www.drush.org), a command line shell and scripting interface for Drupal, on any Linux or UNIX system.
 

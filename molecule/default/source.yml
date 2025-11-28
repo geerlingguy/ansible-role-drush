@@ -12,8 +12,15 @@
 
   pre_tasks:
     - name: Update apt cache.
-      apt: update_cache=true cache_valid_time=600
+      apt:
+        update_cache: True
+        cache_valid_time: 600
       when: ansible_facts.os_family == 'Debian'
+
+    - name: Ensure test prerequisites are installed.
+      package:
+        name: unzip
+        state: present
 
   roles:
     - role: geerlingguy.repo-remi

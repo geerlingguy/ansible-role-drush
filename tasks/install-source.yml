@@ -19,8 +19,8 @@
     {{ composer_path }} update {{ drush_composer_cli_options }}
     chdir={{ drush_source_install_path }}
   when:
-    - drush_clone.changed and ansible_distribution == "Debian"
-    - ansible_distribution_release == "wheezy"
+    - drush_clone.changed and ansible_facts.distribution == "Debian"
+    - ansible_facts.distribution_release == "wheezy"
     - drush_composer.stat.exists
   tags: ['skip_ansible_lint']
 
